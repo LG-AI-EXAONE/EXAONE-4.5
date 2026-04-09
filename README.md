@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/badge/📝-Blog-E343BD?style=for-the-badge" alt="Blog">
   </a>
   <a href="https://github.com/LG-AI-EXAONE/EXAONE-4.5/blob/main/assets/Technical_Report__EXAONE_4_5.pdf" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/📑-Technical_Report_(TBU)-684CF4?style=for-the-badge" alt="Technical Report">
+    <img src="https://img.shields.io/badge/📑-Technical_Report-684CF4?style=for-the-badge" alt="Technical Report">
   </a>
   <a href="https://github.com/LG-AI-EXAONE/EXAONE-4.5" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/🖥️-GitHub-2B3137?style=for-the-badge" alt="GitHub">
@@ -423,6 +423,30 @@ For more details, please refer to the [technical report](https://github.com/LG-A
 For better inference speed and memory usage, it is preferred to serve the model using optimized inference engines. The EXAONE 4.5 model is supported by various frameworks, including TensorRT-LLM, vLLM, SGLang, and llama.cpp. Support will be expanded in the future.
 
 Practically, you can serve the EXAONE 4.5 model with 256K context length on **single H200 GPU**, or **4x A100-40GB GPUs** by using a tensor-parallelism.
+
+
+### TensorRT-LLM
+
+TensorRT-LLM provides zero day support for EXAONE 4.5. Transformers library of our fork is required to utilize EXAONE 4.5 model.
+You can install Transformers by running the following commands:
+
+```bash
+pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5
+```
+
+Please refer to the official [installation guide](https://github.com/NVIDIA/TensorRT-LLM?tab=readme-ov-file#getting-started), and [EXAONE documentations](https://github.com/NVIDIA/TensorRT-LLM/tree/main/examples/models/core/exaone), and [EXAONE 4.5 PR](https://github.com/NVIDIA/TensorRT-LLM/pull/12873) for the detail.
+
+After you install the TensorRT-LLM, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
+
+```bash
+trtllm-serve LGAI-EXAONE/EXAONE-4.5-33B \
+    —tp_size 2 \
+    —port 8000 \
+    —reasoning_parser qwen3
+
+```
+
+An OpenAI-compatible API server will be available at http://localhost:8000/v1.
 
 
 ### vLLM
