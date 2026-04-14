@@ -13,7 +13,7 @@
   <a href="https://www.lgresearch.ai/blog/view?seq=641" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/📝-Blog-E343BD?style=for-the-badge" alt="Blog">
   </a>
-  <a href="https://github.com/LG-AI-EXAONE/EXAONE-4.5/blob/main/assets/Technical_Report__EXAONE_4_5.pdf" style="text-decoration: none;">
+  <a href="http://arxiv.org/abs/2604.08644" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/📑-Technical_Report-684CF4?style=for-the-badge" alt="Technical Report">
   </a>
   <a href="https://github.com/LG-AI-EXAONE/EXAONE-4.5" style="text-decoration: none;">
@@ -36,7 +36,7 @@ Integrating a dedicated visual encoder into the existing EXAONE 4.0 framework, w
 EXAONE 4.5 features 33 billion parameters in total, including 1.2 billion parameters from the vision encoder. 
 EXAONE 4.5 achieves competitive performance in general benchmark while outperforming SOTA models of similar size in document understanding and Korean contextual reasoning, inheriting powerful language capabilities from our previous language models.
 
-For more details, please refer to the [technical report](https://github.com/LG-AI-EXAONE/EXAONE-4.5/blob/main/assets/Technical_Report__EXAONE_4_5.pdf), [blog](https://www.lgresearch.ai/blog/view?seq=641) and [GitHub](https://github.com/LG-AI-EXAONE/EXAONE-4.5).
+For more details, please refer to the [technical report](http://arxiv.org/abs/2604.08644), [blog](https://www.lgresearch.ai/blog/view?seq=641) and [GitHub](https://github.com/LG-AI-EXAONE/EXAONE-4.5).
 
 
 
@@ -822,7 +822,7 @@ The model is licensed under [EXAONE AI Model License Agreement 1.2 - NC](./LICEN
 @article{exaone-4.5,
   title={EXAONE 4.5 Technical Report},
   author={{LG AI Research}},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  journal={arXiv preprint arXiv:2604.08644},
   year={2026}
 }
 ```
