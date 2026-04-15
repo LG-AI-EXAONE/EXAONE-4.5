@@ -487,7 +487,7 @@ Both Transformers and SGLang of our forks are required to utilize EXAONE 4.5 mod
 You can install the requirements by running the following commands:
 
 ```bash
-uv pip install git+https://github.com/lkm2835/sglang.git@add-exaone4_5
+uv pip install 'git+https://github.com/lkm2835/sglang.git@add-exaone4_5#subdirectory=python&egg=sglang[all]'
 uv pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5
 ```
 
