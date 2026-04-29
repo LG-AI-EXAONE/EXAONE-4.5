@@ -456,7 +456,7 @@ You can install the requirements by running the following commands:
 
 ```bash
 uv pip install git+https://github.com/lkm2835/vllm.git@add-exaone4_5
-uv pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5
+uv pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5-v5.3.0.dev0
 ```
 
 After you install the vLLM, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
@@ -488,7 +488,7 @@ You can install the requirements by running the following commands:
 
 ```bash
 uv pip install 'git+https://github.com/lkm2835/sglang.git@add-exaone4_5#subdirectory=python&egg=sglang[all]'
-uv pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5
+uv pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5-v5.3.0.dev0
 ```
 
 After you install the SGLang, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
