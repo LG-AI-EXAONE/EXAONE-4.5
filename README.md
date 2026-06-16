@@ -577,7 +577,7 @@ messages = [
             {
                 "type": "image_url",
                 "image_url": {
-                    "url": "https://github.com/Aim-Highest/EXAONE-4.5/blob/main/assets/exaone45_input2.png?raw=true",
+                    "url": "https://github.com/LG-AI-EXAONE/EXAONE-4.5/blob/main/assets/exaone45_input2.png?raw=true",
                 },
             },
             {
@@ -623,7 +623,7 @@ messages = [
             {
                 "type": "image_url",
                 "image_url": {
-                    "url": "https://github.com/Aim-Highest/EXAONE-4.5/blob/main/assets/exaone45_input1.jpg?raw=true",
+                    "url": "https://github.com/LG-AI-EXAONE/EXAONE-4.5/blob/main/assets/exaone45_input1.jpg?raw=true",
                 },
             },
             {
