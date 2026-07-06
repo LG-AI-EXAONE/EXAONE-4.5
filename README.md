@@ -427,16 +427,12 @@ Practically, you can serve the EXAONE 4.5 model with 256K context length on **si
 
 ### TensorRT-LLM
 
-TensorRT-LLM provides zero day support for EXAONE 4.5. Transformers library of our fork is required to utilize EXAONE 4.5 model.
-You can install Transformers by running the following commands:
+TensorRT-LLM provides zero day support for EXAONE 4.5.
+Please refer to the official [installation guide](https://github.com/NVIDIA/TensorRT-LLM?tab=readme-ov-file#getting-started), and [EXAONE documentations](https://github.com/NVIDIA/TensorRT-LLM/tree/main/examples/models/core/exaone).
 
-```bash
-pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5
-```
+You should also install the Transformers library with `transformers >= 5.8.0`.
 
-Please refer to the official [installation guide](https://github.com/NVIDIA/TensorRT-LLM?tab=readme-ov-file#getting-started), and [EXAONE documentations](https://github.com/NVIDIA/TensorRT-LLM/tree/main/examples/models/core/exaone), and [EXAONE 4.5 PR](https://github.com/NVIDIA/TensorRT-LLM/pull/12873) for the detail.
-
-After you install the TensorRT-LLM, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
+After installing TensorRT-LLM and Transformers, you can launch the server with the following code snippet. You may remove any unnecessary arguments from the snippet.
 
 ```bash
 trtllm-serve LGAI-EXAONE/EXAONE-4.5-33B \
@@ -451,15 +447,9 @@ An OpenAI-compatible API server will be available at http://localhost:8000/v1.
 
 ### vLLM
 
-Both Transformers and vLLM of our forks are required to utilize EXAONE 4.5 model.
-You can install the requirements by running the following commands:
+The EXAONE 4.5 model is officially supported in `transformers >= 5.8.0` and `vllm >= 0.5.8`.
 
-```bash
-uv pip install git+https://github.com/lkm2835/vllm.git@add-exaone4_5
-uv pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5-v5.3.0.dev0
-```
-
-After you install the vLLM, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
+After installing vLLM, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
 
 ```bash
 vllm serve LGAI-EXAONE/EXAONE-4.5-33B \
@@ -483,15 +473,16 @@ An OpenAI-compatible API server will be available at http://localhost:8000/v1.
 
 ### SGLang
 
-Both Transformers and SGLang of our forks are required to utilize EXAONE 4.5 model. 
-You can install the requirements by running the following commands:
+To run the EXAONE 4.5 model with SGLang, you need the Transformers library and our fork of SGLang.
+
+For Transformers, install transformers >= 5.8.0.
+For SGLang, install the required dependencies by running the following command:
 
 ```bash
 uv pip install 'git+https://github.com/lkm2835/sglang.git@add-exaone4_5#subdirectory=python&egg=sglang[all]'
-uv pip install git+https://github.com/nuxlear/transformers.git@add-exaone4_5-v5.3.0.dev0
 ```
 
-After you install the SGLang, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
+After installing the SGLang and transformers, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
 
 ```bash
 python -m sglang.launch_server \
@@ -514,9 +505,9 @@ An OpenAI-compatible API server will be available at http://localhost:8000/v1.
 
 ### llama.cpp
 
-You should build the llama.cpp from [our fork](https://github.com/nuxlear/llama.cpp/tree/add-exaone4_5). Please refer to [the guide](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md) from the original repository.
+The EXAONE 4.5 model is officially supported by llama.cpp in `b9453` build and after.
 
-After you build the llama.cpp library, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
+After installing the llama.cpp library, you can launch the server with the following code snippet. You can remove unnecessary arguments from the snippet.
 
 ```bash
 llama-server \
